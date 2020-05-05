@@ -9,6 +9,8 @@
 #include <napi.h>
 #include "Gist.h"
 
+using namespace std;
+
 class GistNative : public Napi::ObjectWrap<GistNative> {
 	public:
 		static Napi::Object Init(Napi::Env env, Napi::Object exports);
