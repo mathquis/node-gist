@@ -84,7 +84,7 @@ GistNative::GistNative(const Napi::CallbackInfo& info) : Napi::ObjectWrap<GistNa
     int frameSize  = info[0].As<Napi::Number>().Uint32Value();
     int sampleRate = info[1].As<Napi::Number>().Uint32Value();
 
-    gist = new Gist<float>(frameSize, sampleRate, WindowType::HammingWindow);
+    gist = new Gist<float>(frameSize, sampleRate);
 }
 
 GistNative::~GistNative() {
