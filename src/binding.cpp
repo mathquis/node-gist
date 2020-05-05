@@ -1,4 +1,10 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <iostream>
 
+#include <sys/types.h>
+#include <numeric>
 #include <napi.h>
 #include "Gist.h"
 
@@ -84,7 +90,7 @@ GistNative::GistNative(const Napi::CallbackInfo& info) : Napi::ObjectWrap<GistNa
     int frameSize  = info[0].As<Napi::Number>().Uint32Value();
     int sampleRate = info[1].As<Napi::Number>().Uint32Value();
 
-    gist = new Gist<float>(frameSize, sampleRate);
+    gist = new Gist<float>(frameSize, sampleRate, WindowType::HammingWindow);
 }
 
 GistNative::~GistNative() {
