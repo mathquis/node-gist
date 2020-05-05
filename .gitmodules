@@ -1,0 +1,6 @@
+[submodule "Gist"]
+	path = Gist
+	url = https://github.com/adamstark/Gist
+[submodule "src/Gist"]
+	path = src/Gist
+	url = https://github.com/adamstark/Gist

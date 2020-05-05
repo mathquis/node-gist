@@ -1,0 +1,50 @@
+{
+  "name": "node-gist",
+  "version": "0.0.1",
+  "description": "Node binding for the Gist Audio Analysis Library",
+  "main": "lib/index.js",
+  "gypfile": true,
+  "binary": {
+    "module_name": "gist",
+    "module_path": "./lib/binding/{configuration}/{node_abi}-{platform}-{arch}/",
+    "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
+    "host": "https://github.com/mathquis/node-gist/releases/download/",
+    "remote_path": "{version}"
+  },
+  "scripts": {
+    "preinstall": "npm install node-pre-gyp",
+    "install": "node-pre-gyp install --fallback-to-build",
+    "configure": "node-pre-gyp configure",
+    "build": "npm run configure && node-pre-gyp build && npm test",
+    "rebuild": "npm run configure && node-gyp rebuild && npm test",
+    "test": "node test.js",
+    "publish": "node-pre-gyp configure && node-pre-gyp build && node-pre-gyp package && node-pre-gyp-github publish --release"
+  },
+  "devDependencies": {
+    "node-pre-gyp-github": "^1.4.3",
+    "sound-parameters-extractor": "^1.4.0",
+    "wavefile": "^11.0.0"
+  },
+  "dependencies": {
+    "node-addon-api": "^2.0.0",
+    "node-pre-gyp": "^0.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathquis/node-gist.git"
+  },
+  "keywords": [
+    "audio",
+    "analysis",
+    "library",
+    "node",
+    "binding",
+    "mfcc"
+  ],
+  "author": "Mathieu \"Fastjack\" Quisefit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mathquis/node-gist/issues"
+  },
+  "homepage": "https://github.com/mathquis/node-gist#readme"
+}
