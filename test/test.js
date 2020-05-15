@@ -1,9 +1,10 @@
 const File		= require('fs')
+const Path		= require('path')
 const Wav		= require('wavefile').WaveFile
-const Gist		= require('./lib/index')
+const Gist		= require('../lib/index')
 const {framer}	= require('sound-parameters-extractor')
 
-const wavFile = new Wav(File.readFileSync('./test2.wav'))
+const wavFile = new Wav(File.readFileSync(Path.resolve(__dirname) + '/test.wav'))
 
 function convert(n) {
    var v = n < 0 ? n / 32768 : n / 32767;       // convert in range [-32768, 32767]
