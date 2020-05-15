@@ -1,6 +1,6 @@
 {
   "name": "node-gist",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Node binding for the Gist Audio Analysis Library",
   "main": "lib/index.js",
   "gypfile": true,
