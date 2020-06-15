@@ -21,10 +21,6 @@
         "./src/Gist/libs/kiss_fft130"
       ],
       "ldflags": [
-        "-rdynamic",
-        "-ldl",
-        "-lm",
-        "-lpthread"
       ],
       "cflags_cc": [
         "-std=c++11",
@@ -34,7 +30,6 @@
         "-Wno-deprecated-declarations",
         "-Winit-self",
         "-m64",
-        "-pthread",
         "-g",
         "-fPIC",
       ],

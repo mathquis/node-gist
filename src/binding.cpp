@@ -1,8 +1,5 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include <stddef.h>
-#include <string.h>
-#include <iostream>
 
 #include <sys/types.h>
 #include <numeric>

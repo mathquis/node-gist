@@ -1,0 +1,3 @@
+[submodule "src/Gist"]
+	path = src/Gist
+	url = https://github.com/mathquis/Gist.git
