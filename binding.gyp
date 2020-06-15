@@ -29,7 +29,6 @@
         "-Wno-unused-local-typedefs",
         "-Wno-deprecated-declarations",
         "-Winit-self",
-        "-m64",
         "-g",
         "-fPIC",
       ],
