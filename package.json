@@ -1,6 +1,6 @@
 {
   "name": "@mathquis/node-gist",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node binding for the Gist Audio Analysis Library",
   "main": "lib/index.js",
   "gypfile": true,
