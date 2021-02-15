@@ -12,7 +12,7 @@
     "remote_path": "{version}"
   },
   "scripts": {
-    "preinstall": "npm install node-pre-gyp",
+    "preinstall": "npm install @mapbox/node-pre-gyp",
     "install": "node-pre-gyp install --fallback-to-build",
     "configure": "node-pre-gyp configure",
     "build": "npm run configure && node-pre-gyp build && npm test",
@@ -21,13 +21,13 @@
     "publish": "node-pre-gyp configure && node-pre-gyp build && node-pre-gyp package && node-pre-gyp-github publish --release"
   },
   "devDependencies": {
-    "node-pre-gyp-github": "^1.4.3",
+    "@mathquis/node-pre-gyp-github": "^1.0.0",
     "sound-parameters-extractor": "^1.4.0",
     "wavefile": "^11.0.0"
   },
   "dependencies": {
     "node-addon-api": "^2.0.0",
-    "node-pre-gyp": "^0.14.0"
+    "@mapbox/node-pre-gyp": "^1.0.0"
   },
   "repository": {
     "type": "git",
