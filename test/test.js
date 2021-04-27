@@ -22,6 +22,7 @@ console.log('Sample rate is %d', gist.getSamplingFrequency())
 gist.setSamplingFrequency(16000)
 const mfccs = []
 
+const st = (new Date()).getTime()
 for ( let i = 0 ; i < frames.length ; i++ ) {
 	process.stdout.write('.')
 	const audioFrame = Float32Array.from(frames[i])
@@ -37,8 +38,13 @@ for ( let i = 0 ; i < frames.length ; i++ ) {
 	const mfcc = gist.getMelFrequencyCepstralCoefficients()
 	mfccs.push(mfcc)
 }
+const et = (new Date()).getTime()
+
 process.stdout.write('\n')
 console.log(mfccs.length)
 console.log(mfccs[0])
 console.log(mfccs[1])
 console.log(mfccs[2])
+
+console.log('Time: %f', (et-st))
+console.log('Speed: %f', (et-st) / mfccs.length)
